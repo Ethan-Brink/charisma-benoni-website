@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connect | Charisma Church Benoni</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-zinc-950 text-zinc-100">
+    <!-- FIXED NAVBAR -->
+    <!-- FIXED NAVBAR WITH MOBILE MENU -->
+    <nav class="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold text-xl"
+          >
+            C
+          </div>
+          <div>
+            <span class="heading-font text-2xl font-bold tracking-tight"
+              >Charisma</span
+            >
+            <span class="text-xs block -mt-1 text-amber-400">BENONI</span>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="sermons.html" class="nav-link">Sermons</a>
+          <a href="worship.html" class="nav-link">Worship</a>
+          <a href="live.html" class="nav-link">Live</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="connect.html" class="nav-link">Connect</a>
+        </div>
+
+        <!-- Right side buttons -->
+        <div class="flex items-center gap-4">
+          <a
+            href="https://charismabenoni.co.za"
+            target="_blank"
+            class="hidden sm:block text-xs px-4 py-2 border border-amber-400 text-amber-400 rounded-full hover:bg-amber-400 hover:text-zinc-950 transition"
+          >
+            Old Site
+          </a>
+          <button
+            onclick="alert('Online giving coming soon!')"
+            class="gold-btn px-6 py-2.5 rounded-full font-semibold text-sm transition flex items-center gap-2"
+          >
+            <i class="fas fa-heart"></i> Give
+          </button>
+
+          <!-- Hamburger Button -->
+          <button
+            id="hamburger"
+            onclick="toggleMobileMenu()"
+            class="md:hidden hamburger flex flex-col justify-center items-center w-10 h-10 space-y-1.5"
+          >
+            <span class="line-1 block w-6 h-0.5 bg-white"></span>
+            <span class="line-2 block w-6 h-0.5 bg-white"></span>
+            <span class="line-3 block w-6 h-0.5 bg-white"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="mobile-menu">
+        <div class="flex flex-col">
+          <a
+            href="index.html"
+            onclick="closeMobileMenu()"
+            class="mobile-nav-link"
+            >Home</a
+          >
+          <a
+            href="sermons.html"
+            onclick="closeMobileMenu()"
+            class="mobile-nav-link"
+            >Sermons</a
+          >
+          <a
+            href="worship.html"
+            onclick="closeMobileMenu()"
+            class="mobile-nav-link"
+            >Worship</a
+          >
+          <a
+            href="live.html"
+            onclick="closeMobileMenu()"
+            class="mobile-nav-link"
+            >Live</a
+          >
+          <a
+            href="about.html"
+            onclick="closeMobileMenu()"
+            class="mobile-nav-link"
+            >About</a
+          >
+          <a
+            href="connect.html"
+            onclick="closeMobileMenu()"
+            class="mobile-nav-link"
+            >Connect</a
+          >
+
+          <div class="p-6 mt-4">
+            <a
+              href="https://charismabenoni.co.za"
+              target="_blank"
+              class="block text-center border border-amber-400 text-amber-400 py-4 rounded-2xl mb-4"
+            >
+              Visit Old Site
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="bg-zinc-900 py-24 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <span
+          class="inline-block px-6 py-2 bg-amber-400/10 text-amber-400 text-sm font-medium rounded-full mb-6"
+          >GET INVOLVED</span
+        >
+        <h1 class="heading-font text-6xl md:text-7xl font-bold mb-6">
+          Connect With Us
+        </h1>
+        <p class="text-xl text-zinc-400">
+          There’s a place for you at Charisma. Find your community and use your
+          gifts.
+        </p>
+      </div>
+    </header>
+
+    <!-- CONNECT OPTIONS -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="value-card bg-zinc-900 p-10 rounded-3xl text-center">
+            <i class="fas fa-users text-6xl text-amber-400 mb-6"></i>
+            <h3 class="text-3xl font-semibold mb-4">Life Groups</h3>
+            <p class="text-zinc-400 mb-8">
+              Small groups where real relationships are built and faith grows
+              deeper.
+            </p>
+            <button
+              onclick="alert('Life Groups signup would open here')"
+              class="gold-btn w-full py-4 rounded-2xl font-semibold"
+            >
+              Find a Group
+            </button>
+          </div>
+
+          <div class="value-card bg-zinc-900 p-10 rounded-3xl text-center">
+            <i class="fas fa-hands-helping text-6xl text-amber-400 mb-6"></i>
+            <h3 class="text-3xl font-semibold mb-4">Volunteer</h3>
+            <p class="text-zinc-400 mb-8">
+              Serve with your time and talents in kids, youth, tech, worship, or
+              outreach.
+            </p>
+            <button
+              onclick="alert('Volunteer form would open here')"
+              class="gold-btn w-full py-4 rounded-2xl font-semibold"
+            >
+              Serve With Us
+            </button>
+          </div>
+
+          <div class="value-card bg-zinc-900 p-10 rounded-3xl text-center">
+            <i class="fas fa-pray text-6xl text-amber-400 mb-6"></i>
+            <h3 class="text-3xl font-semibold mb-4">Prayer Ministry</h3>
+            <p class="text-zinc-400 mb-8">
+              Submit a prayer request or join our intercessory prayer team.
+            </p>
+            <button
+              onclick="alert('Prayer request form would open here')"
+              class="gold-btn w-full py-4 rounded-2xl font-semibold"
+            >
+              Pray With Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="w-9 h-9 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold"
+            >
+              C
+            </div>
+            <span class="heading-font text-3xl font-bold">Charisma Benoni</span>
+          </div>
+          <p class="text-zinc-500 text-sm">
+            A thriving church in Benoni, Gauteng, passionately proclaiming the
+            gospel of Jesus Christ.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-zinc-400">
+            <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+            <li>
+              <a href="sermons.html" class="hover:text-amber-400">Sermons</a>
+            </li>
+            <li>
+              <a href="worship.html" class="hover:text-amber-400">Worship</a>
+            </li>
+            <li><a href="live.html" class="hover:text-amber-400">Live</a></li>
+            <li><a href="about.html" class="hover:text-amber-400">About</a></li>
+            <li>
+              <a href="connect.html" class="hover:text-amber-400">Connect</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Contact Us</h4>
+          <ul class="space-y-2 text-zinc-400 text-sm">
+            <li>16 Cypress Street, Northmead</li>
+            <li>Benoni, 1501</li>
+            <li>
+              <a href="tel:+27118497824" class="hover:text-amber-400"
+                >+27 11 849 7824</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:admin@charismakerk.co.za"
+                class="hover:text-amber-400"
+                >admin@charismakerk.co.za</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Follow Us</h4>
+          <div class="flex gap-6 text-3xl">
+            <a href="#" class="hover:text-amber-400"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-amber-400"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-amber-400"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center text-zinc-600 text-xs mt-16">
+        © 2026 Charisma Church Benoni • All Rights Reserved
+      </div>
+    </footer>
+
+    <script>
+      tailwind.config = {
+        content: ["./*.html"],
+        theme: {
+          extend: {
+            colors: {
+              gold: "#D4AF37",
+              navy: "#0A2540",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>

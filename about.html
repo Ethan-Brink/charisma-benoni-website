@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Charisma Church Benoni</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-zinc-950 text-zinc-100">
+    <!-- FIXED NAVBAR - Consistent across all pages -->
+    <!-- FIXED NAVBAR WITH MOBILE MENU -->
+    <nav class="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50">
+      <div
+        class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <div
+            class="w-10 h-10 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold text-xl"
+          >
+            C
+          </div>
+          <div>
+            <span class="heading-font text-2xl font-bold tracking-tight"
+              >Charisma</span
+            >
+            <span class="text-xs block -mt-1 text-amber-400">BENONI</span>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="sermons.html" class="nav-link">Sermons</a>
+          <a href="worship.html" class="nav-link">Worship</a>
+          <a href="live.html" class="nav-link">Live</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="connect.html" class="nav-link">Connect</a>
+        </div>
+
+        <!-- Right side buttons -->
+        <div class="flex items-center gap-4">
+          <a
+            href="https://charismabenoni.co.za"
+            target="_blank"
+            class="hidden sm:block text-xs px-4 py-2 border border-amber-400 text-amber-400 rounded-full hover:bg-amber-400 hover:text-zinc-950 transition"
+          >
+            Old Site
+          </a>
+          <button
+            onclick="alert('Online giving coming soon!')"
+            class="gold-btn px-6 py-2.5 rounded-full font-semibold text-sm transition flex items-center gap-2"
+          >
+            <i class="fas fa-heart"></i> Give
+          </button>
+
+          <!-- Hamburger Button -->
+          <button
+            id="hamburger"
+            onclick="toggleMobileMenu()"
+            class="md:hidden hamburger flex flex-col justify-center items-center w-10 h-10 space-y-1.5"
+          >
+            <span class="line-1 block w-6 h-0.5 bg-white"></span>
+            <span class="line-2 block w-6 h-0.5 bg-white"></span>
+            <span class="line-3 block w-6 h-0.5 bg-white"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="mobile-menu">
+        <div class="flex flex-col">
+          <a
+            href="index.html"
+            onclick="closeMobileMenu()"
+            class="mobile-nav-link"
+            >Home</a
+          >
+          <a
+            href="sermons.html"
+            onclick="closeMobileMenu()"
+            class="mobile-nav-link"
+            >Sermons</a
+          >
+          <a
+            href="worship.html"
+            onclick="closeMobileMenu()"
+            class="mobile-nav-link"
+            >Worship</a
+          >
+          <a
+            href="live.html"
+            onclick="closeMobileMenu()"
+            class="mobile-nav-link"
+            >Live</a
+          >
+          <a
+            href="about.html"
+            onclick="closeMobileMenu()"
+            class="mobile-nav-link"
+            >About</a
+          >
+          <a
+            href="connect.html"
+            onclick="closeMobileMenu()"
+            class="mobile-nav-link"
+            >Connect</a
+          >
+
+          <div class="p-6 mt-4">
+            <a
+              href="https://charismabenoni.co.za"
+              target="_blank"
+              class="block text-center border border-amber-400 text-amber-400 py-4 rounded-2xl mb-4"
+            >
+              Visit Old Site
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="bg-zinc-900 py-24">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <span
+          class="inline-block px-6 py-2 bg-amber-400/10 text-amber-400 text-sm font-medium rounded-full mb-6"
+          >KNOW US BETTER</span
+        >
+        <h1 class="heading-font text-6xl md:text-7xl font-bold mb-6">
+          About Charisma Church Benoni
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          A vibrant, Spirit-filled church family in Benoni dedicated to
+          encountering God, proclaiming the gospel, and transforming our
+          community.
+        </p>
+      </div>
+    </header>
+
+    <!-- OUR MISSION -->
+    <section class="py-20">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="heading-font text-5xl font-bold mb-6">Our Mission</h2>
+          <div class="text-2xl text-amber-400 italic">
+            "To be a thriving church that tirelessly builds God’s kingdom and
+            glorifies God by proclaiming the gospel of Jesus Christ."
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-3xl font-semibold mb-6">Who We Are</h3>
+            <p class="text-zinc-300 leading-relaxed mb-6">
+              Charisma Church Benoni is a warm, welcoming Pentecostal church
+              located in Northmead, Benoni. We are passionate about authentic
+              worship, powerful preaching of the Word, and building genuine
+              community.
+            </p>
+            <p class="text-zinc-300 leading-relaxed">
+              Whether you are new to faith or have been walking with Jesus for
+              years, there is a place for you here.
+            </p>
+          </div>
+          <div class="bg-zinc-900 p-10 rounded-3xl">
+            <div class="space-y-8">
+              <div class="flex gap-5">
+                <div
+                  class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-fire text-2xl text-amber-400"></i>
+                </div>
+                <div>
+                  <div class="font-semibold mb-1">Spirit-Filled Worship</div>
+                  <div class="text-zinc-400 text-sm">
+                    We believe in encountering the presence of God through
+                    passionate worship.
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-5">
+                <div
+                  class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-bible text-2xl text-amber-400"></i>
+                </div>
+                <div>
+                  <div class="font-semibold mb-1">Bible-Based Teaching</div>
+                  <div class="text-zinc-400 text-sm">
+                    Practical, relevant messages that equip you for everyday
+                    life.
+                  </div>
+                </div>
+              </div>
+              <div class="flex gap-5">
+                <div
+                  class="w-12 h-12 bg-amber-400/10 rounded-2xl flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="fas fa-users text-2xl text-amber-400"></i>
+                </div>
+                <div>
+                  <div class="font-semibold mb-1">Genuine Community</div>
+                  <div class="text-zinc-400 text-sm">
+                    Life groups and relationships that help you grow in faith.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW HERE / WHAT TO EXPECT -->
+    <section class="py-20 bg-zinc-900">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="heading-font text-5xl font-bold">New Here?</h2>
+          <p class="text-zinc-400 mt-4 text-lg">
+            Here's what you can expect when you visit us
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="value-card bg-zinc-800 p-8 rounded-3xl text-center">
+            <div
+              class="w-16 h-16 mx-auto bg-amber-400/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-clock text-3xl text-amber-400"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Service Times</h3>
+            <p class="text-zinc-400">Sundays at 09:00 &amp; 17:00</p>
+          </div>
+
+          <div class="value-card bg-zinc-800 p-8 rounded-3xl text-center">
+            <div
+              class="w-16 h-16 mx-auto bg-amber-400/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-map-marker-alt text-3xl text-amber-400"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Location</h3>
+            <p class="text-zinc-400">
+              16 Cypress Street<br />Northmead, Benoni, 1501
+            </p>
+          </div>
+
+          <div class="value-card bg-zinc-800 p-8 rounded-3xl text-center">
+            <div
+              class="w-16 h-16 mx-auto bg-amber-400/10 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-heart text-3xl text-amber-400"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">Family Friendly</h3>
+            <p class="text-zinc-400">
+              Kids church, youth ministry &amp; a warm welcome for everyone
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-16 text-center">
+          <a
+            href="#"
+            onclick="alert('Plan Your Visit form would open here')"
+            class="inline-block gold-btn px-10 py-4 rounded-full font-semibold"
+          >
+            Plan Your First Visit →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR VALUES -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="heading-font text-5xl font-bold">Our Core Values</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="value-card bg-zinc-900 p-8 rounded-3xl">
+            <div class="text-amber-400 text-4xl mb-4">🔥</div>
+            <h3 class="font-semibold text-xl mb-3">Passionate Worship</h3>
+            <p class="text-zinc-400">
+              We love to worship God with all our hearts.
+            </p>
+          </div>
+          <div class="value-card bg-zinc-900 p-8 rounded-3xl">
+            <div class="text-amber-400 text-4xl mb-4">📖</div>
+            <h3 class="font-semibold text-xl mb-3">Sound Doctrine</h3>
+            <p class="text-zinc-400">
+              We teach the Bible as the inspired Word of God.
+            </p>
+          </div>
+          <div class="value-card bg-zinc-900 p-8 rounded-3xl">
+            <div class="text-amber-400 text-4xl mb-4">🤝</div>
+            <h3 class="font-semibold text-xl mb-3">Authentic Community</h3>
+            <p class="text-zinc-400">
+              We do life together and care for one another.
+            </p>
+          </div>
+          <div class="value-card bg-zinc-900 p-8 rounded-3xl">
+            <div class="text-amber-400 text-4xl mb-4">🌍</div>
+            <h3 class="font-semibold text-xl mb-3">Kingdom Impact</h3>
+            <p class="text-zinc-400">
+              We reach our city with the love and gospel of Jesus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-16">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="w-9 h-9 bg-gradient-to-br from-amber-400 to-yellow-600 rounded-full flex items-center justify-center text-white font-bold"
+            >
+              C
+            </div>
+            <span class="heading-font text-3xl font-bold">Charisma Benoni</span>
+          </div>
+          <p class="text-zinc-500 text-sm">
+            A thriving church in Benoni, Gauteng, passionately proclaiming the
+            gospel of Jesus Christ.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-zinc-400">
+            <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+            <li>
+              <a href="sermons.html" class="hover:text-amber-400">Sermons</a>
+            </li>
+            <li>
+              <a href="worship.html" class="hover:text-amber-400">Worship</a>
+            </li>
+            <li><a href="about.html" class="hover:text-amber-400">About</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Contact Us</h4>
+          <ul class="space-y-2 text-zinc-400 text-sm">
+            <li>16 Cypress Street, Northmead</li>
+            <li>Benoni, 1501</li>
+            <li>
+              <a href="tel:+27118497824" class="hover:text-amber-400"
+                >+27 11 849 7824</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:admin@charismakerk.co.za"
+                class="hover:text-amber-400"
+                >admin@charismakerk.co.za</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Follow Us</h4>
+          <div class="flex gap-6 text-3xl">
+            <a href="#" class="hover:text-amber-400"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-amber-400"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="hover:text-amber-400"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center text-zinc-600 text-xs mt-16">
+        © 2026 Charisma Church Benoni • All Rights Reserved
+      </div>
+    </footer>
+
+    <script>
+      // Tailwind config
+      tailwind.config = {
+        content: ["./*.html"],
+        theme: {
+          extend: {
+            colors: {
+              gold: "#D4AF37",
+              navy: "#0A2540",
+            },
+          },
+        },
+      };
+    </script>
+  </body>
+</html>
